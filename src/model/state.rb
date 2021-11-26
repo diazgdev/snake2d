@@ -1,5 +1,5 @@
 module Model
-  class Coord < Struct.new(row, col)
+  class Coord < Struct.new(:row, :col)
 
   end
 
@@ -7,15 +7,15 @@ module Model
 
   end
 
-  class Snake < Struct.new(positions)
+  class Snake < Struct.new(:positions)
 
   end
 
-  class Grid < Struct.new(rows, cols)
+  class Grid < Struct.new(:rows, :cols)
 
   end
 
-  class State < Struct.new(snake, food, grid)
+  class State < Struct.new(:snake, :food, :grid)
 
   end
 end
